@@ -14,7 +14,7 @@
 * has_many : messages
 * has_many : group_users
 
-## group tables
+## groups tables
 
 | column     | Type        | Option                   |
 |:-----------|------------:|:------------------------:|
@@ -38,7 +38,7 @@
 * belongs_to : user
 * belongs_to : group
 
-## message table
+## messages table
 
 | column     | Type        | Option                        |
 |:-----------|------------:|:-----------------------------:|
