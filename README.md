@@ -2,11 +2,11 @@
 
 ## users table
 
-| column     | Type        | Option                   |
-|:-----------|------------:|:------------------------:|
-|  name      | string      | null: false,unique: true |
-|  email     | varchar     | null: false,unique: true |
-|  password  | varchar     | null: false,unique: false|
+| column     | Type        | Option                    |
+|:-----------|------------:|:-------------------------:|
+|  name      | string      | null: false, unique: true |
+|  email     | varchar     | null: false, unique: true |
+|  password  | varchar     | null: false,              |
 
 ### Association
 
@@ -16,9 +16,9 @@
 
 ## groups tables
 
-| column     | Type        | Option                   |
-|:-----------|------------:|:------------------------:|
-|  name      | string      | null: false,unique: true |
+| column     | Type        | Option                    |
+|:-----------|------------:|:-------------------------:|
+|  name      | string      | null: false, unique: true |
 
 ### Association
 
@@ -28,10 +28,10 @@
 
 ## group_users table
 
-| column     | Type        | Option                        |
-|:-----------|------------:|:-----------------------------:|
-|  group_id  | integer     | null: false,foreign_key: true |
-|  user_id   | integer     | null: false,foreign_key: true |
+| column     | Type        | Option                         |
+|:-----------|------------:|:------------------------------:|
+|  group_id  | integer     | null: false, foreign_key: true |
+|  user_id   | integer     | null: false, foreign_key: true |
 
 ### Association
 
@@ -40,12 +40,12 @@
 
 ## messages table
 
-| column     | Type        | Option                        |
-|:-----------|------------:|:-----------------------------:|
-|  body      | text        |                               |
-|  image     | string      |                               |
-|  group_id  | integer     | null: false,foreign_key: true |
-|  user_id   | integer     | null: false,foreign_key: true |
+| column     | Type        | Option                         |
+|:-----------|------------:|:------------------------------:|
+|  body      | text        |                                |
+|  image     | string      |                                |
+|  group_id  | integer     | null: false, foreign_key: true |
+|  user_id   | integer     | null: false, foreign_key: true |
 
 ### Association
 * belongs_to : user
