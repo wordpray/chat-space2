@@ -1,0 +1,178 @@
+body{
+  height: 100%;
+  width: 100%;
+}
+
+.notice{
+  color: #fff;
+  background-color: #38aef0;
+  text-align: center;
+}
+
+.chat-side{
+  height: 100vh;
+  width: 300px;
+  float: left;
+  &__user{
+    height: 15%;
+    width: 100%;
+    background-color: #090c10;
+    position: relative;
+  }
+  &__user-content{
+    height: 50px;
+    width: 100%;
+    line-height: 50px;
+    margin: auto 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+  }
+  &__user-name{
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 20px;
+    position: relative;
+    display: inline-block;
+  }
+  &__user--new-group{
+    color: #fff;
+    margin-left: 90px;
+    position: relative;
+    display: inline-block;
+  }
+  &__user--edit-user{
+    color: #fff;
+    position: relative;
+    display: inline-block;
+  }
+
+  &__groups{
+    height: 85%;
+    width: 100%;
+    background-color: #2f3e51;
+  }
+  &__groups-list{
+    height: 100%;
+    color: #fff;
+  }
+
+  &__group{
+    padding: 20px;
+  }
+  &__group-name{
+    font-size: 15px;
+    color: #fff;
+  }
+  &__group-message{
+    font-size: 11px;
+    color: #fff;
+  }
+}
+
+.chat-main{
+  height: 100vh;
+  width: calc( 100vw - 300px );
+  float: left;
+  
+  &__header{
+    height: 15%;
+    border: 1px solid #eee;
+  }
+  &__header--group{
+    margin: 0 40px;
+
+  }
+  &__header--group-name{
+    color: #333;
+    font-size: 20px;
+    margin: 35px 0 15px;
+    float: left;
+  }
+  &__header--group-edit-btn{
+    color: #38AEF0;
+    font-size: 15px;
+    padding: 12.5px 20px;
+    margin: 28px 20px 0;
+    border: 1px solid #38AEF0;
+    float: right;
+  }
+  &__header--clearfix{
+    clear: both;
+  }
+
+  &__header-members{
+    color: #999;
+    font-size: 12px;
+    margin: 0 40px;
+  }
+
+  &__body{
+    height: calc( 100vh - 15% - 90px );
+    overflow-y: scroll;
+  }
+  &__body--messages-list{
+    padding-top: 46px;
+    padding-left: 40px;
+  }
+  &__messages{
+    padding: 20px 0;
+  }
+
+  &__message-name{
+    color: #434A54;
+    font-size: 16px;
+    font-weight: bold;
+    float: left;
+  }
+  &__message-time{
+    color: #999;
+    font-size: 12px;
+    padding: 0 10px 10px;
+    float: left;
+  }
+  &__message-body{
+    color: #434A54;
+    clear: both;
+  }
+  .clearfix:after{
+    clear: both;
+    content:  '';
+    display: block;
+  }
+}
+
+.chat-main__footer {
+  background-color: #e6e6e6;
+  height: 50px;
+  padding: 20px 40px;
+  position: relative;
+
+  .message{
+    height: 50px;
+    width: calc( 100vw - 520px);
+    float: left;
+    line-height: 50px;
+    display: block;
+    padding-left: 10px;
+    padding-right: 46px;
+  }
+  .fa.fa-picture-o{
+    color: black;
+    position: absolute;
+    top: 30px;
+    right: 150px;
+  }
+  .send-button{
+    background-color: #38aef0;
+    font-size: 16px;
+    color: white;
+    height: 50px;
+    width: 80px;
+    position: absolute;
+    top: 20px;
+    border: none;
+  }
+
+}
