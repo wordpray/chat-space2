@@ -1,24 +1,7 @@
 .notification
   .notice ログインしました
 
-.chat-side
-  .chat-side__user
-    .chat-side__user-content
-      .chat-side__user-name UserName
-      = link_to root_path, class: 'chat-side__user--new-group' do
-        %i.fa.fa-cog.fa-fw
-      = link_to root_path, class: 'chat-side__user--edit-user'do
-        %i.fa.fa-pencil-square-o.fa-fw
-  .chat-side__groups
-    .chat-side__groups-list
-      = link_to "" do
-        .chat-side__group
-          .chat-side__group-name GroupName
-          .chat-side__group-message Message
-      = link_to "" do
-        .chat-side__group
-          .chat-side__group-name GroupName
-          .chat-side__group-message Message
+= render 'sidebar'
 .chat-main
   .chat-main__header
     .chat-main__header--group.clearfix
@@ -30,18 +13,19 @@
       %i GroupMember
       %i GroupMember
   .chat-main__body
-    .chat-main__body--messages-list
-      .chat-main__message.clearfix
-        .chat-main__message-name Name
-        .chat-main__message-time 2017/06/02
-        .chat-main__message-body こんにちは！
-      .chat-main__message.clearfix
-        .chat-main__message-name Name
-        .chat-main__message-time 2017/06/02
-        .chat-main__message-body こんにちは！
+    %ul.chat-main__body--messages-list
+      %li.chat-main__message.clearfix
+        %P.chat-main__message-name Name
+        %P.chat-main__message-time 2017/06/02
+        %P.chat-main__message-body こんにちは！
+      %li.chat-main__message.clearfix
+        %P.chat-main__message-name Name
+        %P.chat-main__message-time 2017/06/02
+        %P.chat-main__message-body こんにちは！
   .chat-main__footer
-    =form_tag  class: 'chat-main__footer-form' do
-      =text_field_tag :text, "", class: 'message', placeholder: 'type a message'
-      =button_tag 'Send' , class: 'send-button' , type: :submit
-      .fa.fa-picture-o
-
+    %form
+      .chat-main__footer__body
+        %input{ placeholder: "type a message" ,class: "message" ,type: "text" }
+        %label
+          %i.fa.fa-picture-o
+      %input{ type: "submit",value: "Send",class: "send-button" }
