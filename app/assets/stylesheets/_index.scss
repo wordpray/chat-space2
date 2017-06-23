@@ -39,7 +39,6 @@ body{
     }
     &--new-group{
       color: $white;
-      margin-left: 90px;
       position: relative;
       display: inline-block;
     }
@@ -47,6 +46,7 @@ body{
       color: $white;
       position: relative;
       display: inline-block;
+      margin-left: 90px;
     }
   }
 
@@ -162,8 +162,8 @@ body{
       .fa.fa-picture-o{
         color: black;
         position: absolute;
-        top: 30px;
-        right: 150px;
+        top: 40px;
+        right: 130px;
     }
     .send-button{
         background-color: $blue;
