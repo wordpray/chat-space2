@@ -1,0 +1,31 @@
+.notification
+  .notice ログインしました
+
+= render 'sidebar'
+.chat-main
+  .chat-main__header
+    .chat-main__header--group.clearfix
+      .chat-main__header--group-name GroupName
+      = link_to "edit",'', class: 'chat-main__header--group-edit-btn'
+      .chat-main__header--clearfix
+    .chat-main__header-members 
+      Member:
+      %i GroupMember
+      %i GroupMember
+  .chat-main__body
+    %ul.chat-main__body--messages-list
+      %li.chat-main__message.clearfix
+        %P.chat-main__message-name Name
+        %P.chat-main__message-time 2017/06/02
+        %P.chat-main__message-body こんにちは！
+      %li.chat-main__message.clearfix
+        %P.chat-main__message-name Name
+        %P.chat-main__message-time 2017/06/02
+        %P.chat-main__message-body こんにちは！
+  .chat-main__footer
+    %form
+      .chat-main__footer__body
+        %input{ placeholder: "type a message" ,class: "message" ,type: "text" }
+        %label
+          %i.fa.fa-picture-o
+      %input{ type: "submit",value: "Send",class: "send-button" }

@@ -1,0 +1,18 @@
+.chat-side
+  .chat-side__user
+    .chat-side__user-content
+      .chat-side__user-name UserName
+      = link_to root_path, class: 'chat-side__user--edit-user'do
+        %i.fa.fa-pencil-square-o.fa-fw
+      = link_to root_path, class: 'chat-side__user--new-group' do
+        %i.fa.fa-cog.fa-fw
+  .chat-side__groups
+    %ul.chat-side__groups-list
+      = link_to "" do
+        %li.chat-side__group
+          %P.chat-side__group-name GroupName
+          %P.chat-side__group-message Message
+      = link_to "" do
+        %li.chat-side__group
+          %P.chat-side__group-name GroupName
+          %P.chat-side__group-message Message

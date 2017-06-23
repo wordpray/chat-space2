@@ -1,0 +1,104 @@
+// chat-main部分
+.chat-main{
+  height: 100vh;
+  width: calc( 100vw - 300px );
+  float: left;
+
+// chat-main__header部分
+  &__header{
+    height: 15%;
+    border: 1px solid #eee;
+    &--group{
+      margin: 0 40px;
+      &-name{
+        color: #333;
+        font-size: 20px;
+        margin: 35px 0 15px;
+        float: left;
+      }
+      &-edit-btn{
+        color: $blue;
+        font-size: 15px;
+        padding: 12.5px 20px;
+        margin: 28px 20px 0;
+        border: 1px solid $blue;
+        float: right;
+      }
+    }
+    &--clearfix{
+      clear: both;
+    }
+    &-members{
+      color: $gray;
+      font-size: 12px;
+      margin: 0 40px;
+    }
+  }
+
+// chat-main__body部分
+  &__body{
+    height: calc( 100vh - 15% - 90px );
+    overflow-y: scroll;
+    &--messages-list{
+      padding-top: 46px;
+      padding-left: 40px;
+    }
+  }
+  &__message{
+    padding: 20px 0;
+    &-name{
+      color: $black;
+      font-size: 16px;
+      font-weight: bold;
+      float: left;
+    }
+    &-time{
+      color: $gray;
+      font-size: 12px;
+      padding: 0 10px 10px;
+      float: left;
+    }
+    &-body{
+        color: $black;
+        clear: both;
+    }
+
+  }
+  &.clearfix:after{
+    clear: both;
+    content:  '';
+    display: block;
+  }
+// chat-main__footer部分
+  &__footer{
+    background-color: #e6e6e6;
+    height: 50px;
+    padding: 20px 40px;
+    position: relative;
+      .message{
+        height: 50px;
+        width: calc( 100vw - 520px);
+        float: left;
+        line-height: 50px;
+        display: block;
+        padding-left: 10px;
+        padding-right: 46px;
+    }
+      .fa.fa-picture-o{
+        color: black;
+        position: absolute;
+        top: 40px;
+        right: 130px;
+    }
+    .send-button{
+        background-color: $blue;
+        font-size: 16px;
+        color: white;
+        height: 50px;
+        width: 80px;
+        position: absolute;
+        top: 20px;
+        border: none;
+    }
+  }
+}
