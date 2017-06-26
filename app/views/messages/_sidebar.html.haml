@@ -2,9 +2,9 @@
   .chat-side__user
     .chat-side__user-content
       .chat-side__user-name UserName
-      = link_to edit_user_registration_path, class: 'chat-side__user--edit-user'do
+      = link_to root_path, class: 'chat-side__user--edit-user'do
         %i.fa.fa-pencil-square-o.fa-fw
-      = link_to root_path, class: 'chat-side__user--new-group' do
+      = link_to edit_user_registration_path, class: 'chat-side__user--new-group' do
         %i.fa.fa-cog.fa-fw
   .chat-side__groups
     %ul.chat-side__groups-list
