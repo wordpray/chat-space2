@@ -19,7 +19,6 @@ class GroupsController < ApplicationController
     else
       flash.now[:alert] = 'グループ作成に失敗しました。'
       render :new
-      
     end
   end
 
