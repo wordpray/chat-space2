@@ -23,10 +23,9 @@
       .chat-group-form__field--left
         = f.label :users, "チャットメンバー", class: "chat-group-form__label"
       .chat-group-form__field--right
-        = collection_check_boxes(:group, :user_ids, User.all, :id, :name) do |b|
-          = b.label {b.check_box + b.text}
+        = collection_check_boxes(:group, :user_ids, User.all, :id, :name)
     .chat-group-form__field.clearfix
       .chat-group-form__field--left
       .chat-group-form__field--right
         / グループ作成機能の追加時はここにcollection_check_boxesの記述を入れてください
-        = submit_tag 'Save', class: "chat-group-form__action-btn", type: "submit", data: {disable_with: "Save"}
+        = f.submit 'Save', class: "chat-group-form__action-btn", type: "submit", data: {disable_with: "Save"}
