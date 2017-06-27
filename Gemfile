@@ -55,4 +55,7 @@ gem "haml-rails", "~> 0.9"
 gem "font-awesome-rails"
 gem 'devise'
 gem 'devise-i18n'
-gem 'pry-rails' 
+
+group :development do
+  gem 'pry-rails'
+end
