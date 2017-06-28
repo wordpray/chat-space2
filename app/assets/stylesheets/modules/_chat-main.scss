@@ -84,11 +84,14 @@
         padding-left: 10px;
         padding-right: 46px;
     }
-      .fa.fa-picture-o{
+    .fa.fa-picture-o{
         color: black;
         position: absolute;
         top: 40px;
         right: 130px;
+    }
+    .image{
+      display: none;
     }
     .send-button{
         background-color: $blue;

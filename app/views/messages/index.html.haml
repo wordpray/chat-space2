@@ -20,9 +20,9 @@
         %P.chat-main__message-time 2017/06/02
         %P.chat-main__message-body こんにちは！
   .chat-main__footer
-    %form
+    = form_for [@group, @message], html: {class: 'chat-main__form'} do |f|
       .chat-main__footer__body
-        %input{ placeholder: "type a message" ,class: "message" ,type: "text" }
-        %label
-          %i.fa.fa-picture-o
-      %input{ type: "submit",value: "Send",class: "send-button" }
+        = f.text_field :body, placeholder: "type a message", class: "message"
+        = f.label :image, class: "image_file fa fa-picture-o" do
+          = f.file_field :image, class: "image"
+        = f.submit "send", class: "send-button"
