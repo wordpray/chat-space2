@@ -1,0 +1,9 @@
+%ul.chat-main__body--messages-list
+  - @messages.each do |message|
+    %li.chat-main__message.clearfix
+      %P.chat-main__message-name
+        = message.user.name
+      %P.chat-main__message-time
+        = message.created_at.strftime("%Y/%m/%d %H:%M:%S")
+      %P.chat-main__message-body
+        = message.body

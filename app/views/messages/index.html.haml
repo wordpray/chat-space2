@@ -10,15 +10,7 @@
       Member:
       #{@group.users.pluck(:name).join(" ")}
   .chat-main__body
-    %ul.chat-main__body--messages-list
-      %li.chat-main__message.clearfix
-        %P.chat-main__message-name Name
-        %P.chat-main__message-time 2017/06/02
-        %P.chat-main__message-body こんにちは！
-      %li.chat-main__message.clearfix
-        %P.chat-main__message-name Name
-        %P.chat-main__message-time 2017/06/02
-        %P.chat-main__message-body こんにちは！
+    = render 'messages'
   .chat-main__footer
     = form_for [@group, @message], html: {class: 'chat-main__form'} do |f|
       .chat-main__footer__body
