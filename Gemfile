@@ -56,6 +56,6 @@ gem "font-awesome-rails"
 gem 'devise'
 gem 'devise-i18n'
 
-group :development do
+group :development, :test do
   gem 'pry-rails'
 end
