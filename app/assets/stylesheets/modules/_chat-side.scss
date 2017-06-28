@@ -55,6 +55,11 @@ body{
 
   &__group{
     padding: 20px;
+    a{
+      display:block;
+      text-decoration: none;
+
+    }
     &-name{
       font-size: 15px;
       color: $white;
