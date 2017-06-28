@@ -55,6 +55,8 @@ gem "haml-rails", "~> 0.9"
 gem "font-awesome-rails"
 gem 'devise'
 gem 'devise-i18n'
+gem 'carrierwave'
+gem 'mini_magick'
 
 group :development, :test do
   gem 'pry-rails'
