@@ -26,5 +26,5 @@ def set_projects
   @group = Group.find(params[:group_id])
   @groups = current_user.groups
   @users = @group.users
-  @messages = @group.messages.includes(:user)
+  @messages = @group.messages.includes(:user).order("created_at DESC")
 end
