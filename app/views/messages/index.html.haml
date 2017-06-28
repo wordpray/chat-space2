@@ -3,13 +3,12 @@
 .chat-main
   .chat-main__header
     .chat-main__header--group.clearfix
-      .chat-main__header--group-name GroupName
+      .chat-main__header--group-name #{@group.name}
       = link_to "edit", edit_group_path(1), class: 'chat-main__header--group-edit-btn'
       .chat-main__header--clearfix
     .chat-main__header-members 
       Member:
-      %i GroupMember
-      %i GroupMember
+      #{@group.users.pluck(:name).join(" ")}
   .chat-main__body
     %ul.chat-main__body--messages-list
       %li.chat-main__message.clearfix
