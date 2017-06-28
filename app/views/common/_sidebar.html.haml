@@ -14,4 +14,8 @@
           = link_to "" do
             %P.chat-side__group-name
               = group.name
-            %P.chat-side__group-message Message
+            %P.chat-side__group-message
+              - if group.messages.present?
+                = group.messages.last.body
+              - else
+                No message
