@@ -19,7 +19,8 @@ end
 private
 
 def message_params
-  params.require(:message).permit(:body, :image).merge(group_id: params[:group_id], user_id: current_user.id)
+  params.require(:message).permit(:body, :image).merge(group_id: params[:group_id])
+    binding.pry
 end
 
 def set_projects
