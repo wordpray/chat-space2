@@ -7,6 +7,6 @@ Rails.application.routes.draw do
     get "sign_in", to: "users/sessions#new"
     get "sign_out", to: "users/sessions#destroy"
   end
-  resources :groups, only:[:create,:new,:edit,:update]
-  root 'messages#index'
+  resources :groups, only:[:index,:create,:new,:edit,:update]
+  root 'groups#index'
 end
