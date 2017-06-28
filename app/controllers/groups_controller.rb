@@ -23,8 +23,7 @@ class GroupsController < ApplicationController
   end
 
   def update
-    @group.update(group_params)
-    if @group.save
+    if @group.update(group_params)
       redirect_to root_path, notice: 'グループ情報が更新されました。'
     else
       flash.now[:alert] = 'グループ作成に失敗しました。'
