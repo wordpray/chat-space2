@@ -18,3 +18,6 @@
 
 # Ignore image files.
 public/uploads
+
+# Ignore spec files.
+/spec/image/
