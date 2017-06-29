@@ -58,10 +58,12 @@ gem 'devise-i18n'
 gem 'carrierwave'
 gem 'mini_magick'
 
+
 group :development, :test do
   gem 'pry-rails'
   gem 'rspec-rails', '~> 3.5'
   gem 'factory_girl_rails', "~> 4.4.1"
+  gem 'rails-controller-testing'
 end
 
 group :test do
