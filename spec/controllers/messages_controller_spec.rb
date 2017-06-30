@@ -21,6 +21,7 @@ describe MessagesController, type: :controller do
         login_user user
         get :index, params: { group_id: group.id }
       end
+
       it "assigns the requested tweet to @message" do
         expect(assigns(:message)).to be_a_new(Message)
       end
@@ -53,6 +54,7 @@ describe MessagesController, type: :controller do
       before do
         get :index, params: { group_id: group.id }
       end
+
       it "is redirected to the intended view" do
         expect(response).to redirect_to new_user_session_path
       end
@@ -64,6 +66,7 @@ describe MessagesController, type: :controller do
       before do
         login_user user
       end
+
       it "saves the message" do
         expect {post :create, params: message_params}.to change(Message, :count).by(1)
       end
@@ -78,6 +81,7 @@ describe MessagesController, type: :controller do
       before do
         login_user user
       end
+      
       it "is not saved" do
         expect{post :create, params: message_empty}.to_not change(Message, :count)
       end
