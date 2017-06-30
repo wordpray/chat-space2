@@ -44,7 +44,7 @@ describe MessagesController, type: :controller do
         login_user user
       end
       it "saves the message" do
-        expect {post :create, params: message_params}.to change(Message, :count)
+        expect {post :create, params: message_params}.to change(Message, :count).by(1)
       end
       it "is redirected to the intended view" do
         post :create, params: message_params
