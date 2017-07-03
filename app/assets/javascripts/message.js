@@ -1,15 +1,15 @@
 $(function(){
 
-  function text_and_image(message){
+  function body_and_image(message){
     var html = `
                 <p class="chat-main__message-name"> ${message.user_name} </p>
-                <p class="chat-main__message-time"> ${message.created_at.strftime("%Y/%m/%d %H:%M:%S")} </p>
+                <p class="chat-main__message-time"> ${message.created_at} </p>
                 <p class="chat-main__message-body"> ${message.body} </p>
                 <img class="hat-main__message-image" src="${message.image.url}"</p>
                 `;
     return html;
   }
-  function text(message){
+  function body_only(message){
     var html = `
                 <p class="chat-main__message-name"> ${message.user_name} </p>
                 <p class="chat-main__message-time"> ${message.created_at.strftime("%Y/%m/%d %H:%M:%S")} </p>
@@ -32,7 +32,6 @@ $(function(){
       contentType: false
     })
     .done(function(data){
-      console.log(data);
       if(data.image.url === null){
         var html = text(data);
         $('.chat-main__body--messages-list').prepend(html);
