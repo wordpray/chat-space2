@@ -26,7 +26,7 @@ $(function(){
     $.ajax({
       url: href,
       type: "POST",
-      data: formData;
+      data: formData,
       dataType: 'json',
       processData: false,
       contentType: false
