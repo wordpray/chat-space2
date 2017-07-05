@@ -38,7 +38,6 @@ $(function(){
       contentType: false
     })
     .done(function(data){
-      console.log();
       if(data.image.url === null){
         var html = body_only(data);
         $('.chat-main__body--messages-list').append(html);
@@ -66,12 +65,9 @@ $(function(){
     })
     .done(function(messages){
       var message_size = $('ul.chat-main__body--messages-list li').length;
-      console.log(message_size);
-
       if (message_size !== messages.length){
         messages.forEach(function(message){
         html = body_only(message);
-        // console.log(html);
       });
       $('.chat-main__body--messages-list').append(html)
       autoScroll();
