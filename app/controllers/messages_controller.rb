@@ -3,6 +3,10 @@ class MessagesController < ApplicationController
 
   def index
     @message = Message.new
+    respond_to do |format|
+      format.html {render :index}
+      format.json
+    end
   end
 
   def create
@@ -29,5 +33,5 @@ def set_projects
   @group = Group.find(params[:group_id])
   @groups = current_user.groups
   @users = @group.users
-  @messages = @group.messages.includes(:user).order("created_at DESC")
+  @messages = @group.messages.includes(:user).order("created_at ASC")
 end
