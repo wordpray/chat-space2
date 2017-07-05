@@ -38,7 +38,7 @@ $(function(){
       contentType: false
     })
     .done(function(data){
-      if(data.image.url === null){
+      if(!data.image.url) {
         var html = body_only(data);
         $('.chat-main__body--messages-list').append(html);
         $('.chat-main__form').val('');
